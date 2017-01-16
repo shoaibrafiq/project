@@ -19,14 +19,12 @@ Route::get('/', function () {
 Route::group(['middleware' => ['web']], function () {
 
 Route::auth();
-
 Route::get('/films', 'HomeController@index');
-
 Route::get('films', 'FilmsController@index');
 Route::get('films/{film}', 'FilmsController@show');
-
 Route::post('films/{film}/reviews', 'ReviewsController@store');
-
+Route::get('/reviews/{review}/edit', 'ReviewsController@edit');
+Route::get('/reviews/{review}/delete', 'ReviewsController@delete');
 Route::patch('reviews/{review}', 'ReviewsController@update');
 
 });

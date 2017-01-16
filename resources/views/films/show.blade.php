@@ -15,7 +15,9 @@
 
   <li class="list-group-item">
     {{ $review->body }}
-<a href="#" class="pull-right"> {{ $review->user->name }}</a>
+<a href="#" class="pull-right btn"> {{ $review->user->name }}</a>
+<a href="/reviews/{{ $review->id }}/delete" class="pull-right btn">Delete</a>
+<a href="/reviews/{{ $review->id }}/edit" class="pull-right btn">Edit</a>
 
   </li>
 

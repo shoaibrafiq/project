@@ -33,6 +33,20 @@ return back();
 
     }
 
+public function edit(Review $review)
+{
+
+return view('reviews.edit', compact('review'));
+
+
+}
+
+ public function delete(Review $review){
+
+
+$review->delete();
+return back();
+}
 
 
 
