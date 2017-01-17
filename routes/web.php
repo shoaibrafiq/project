@@ -12,6 +12,10 @@
 */
 
 
-Route::get('/', 'HomeController@index')->name('home');
-Route::get('/jackets', 'HomeController@jackets')->name('jackets');
-Route::get('/jacket', 'HomeController@jacket')->name('jacket');
+Route::get('/', 'FrontEndController@index')->name('home');
+Route::get('/jackets', 'FrontEndController@jackets')->name('jackets');
+Route::get('/jacket', 'FrontEndController@jacket')->name('jacket');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index');
