@@ -18,7 +18,7 @@ Route::get('/jacket', 'FrontEndController@jacket')->name('jacket');
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index');
+Route::get('/logout', 'Auth\LoginController@logout');
 
 Route::group(['prefix' => 'admin', 'middleware'=>'auth'], function () {
   route::get('/', function () {
