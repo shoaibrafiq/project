@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Admin Area</title>
+    <title>@yield('title','ICB Admin')</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="{{asset('dist/css/bootstrap.min.css')}}" rel="stylesheet">
 
