@@ -19,3 +19,10 @@ Route::get('/jacket', 'FrontEndController@jacket')->name('jacket');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index');
+
+Route::group(['prefix' => 'admin', 'middleware'=>'auth'], function () {
+  route::get('/', function () {
+    return view('admin.index');
+  })->name('admin.index');
+
+});
