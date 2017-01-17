@@ -20,7 +20,7 @@
                                   <h3 style="margin:5px auto;"><label>$1</label></h3>
                               </div>
                               <div class="col-md-8 col-sm-8 col-xs-8">
-                                  <a href="#" class="btn btn-success btn-product">View Jacket</a>
+                                  <a href="{{route('jacket')}}" class="btn btn-success btn-product">View Jacket</a>
                               </div>
                           </div>
 

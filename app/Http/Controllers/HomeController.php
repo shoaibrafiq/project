@@ -19,7 +19,7 @@ return view('front-end.jackets');
 
 public function jacket()
 {
-  return view('front-end.shirt');
+  return view('front-end.jacket');
 }
 
 }

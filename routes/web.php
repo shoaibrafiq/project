@@ -14,3 +14,4 @@
 
 Route::get('/', 'HomeController@index')->name('home');
 Route::get('/jackets', 'HomeController@jackets')->name('jackets');
+Route::get('/jacket', 'HomeController@jacket')->name('jacket');

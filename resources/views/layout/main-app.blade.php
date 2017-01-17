@@ -43,7 +43,7 @@
                         <a href="#">Contact</a>
                     </li>
                     <li>
-                        <a href="#">Cart</a>
+                        <a href="#">Basket</a>
                     </li>
                 </ul>
 
