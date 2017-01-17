@@ -1,15 +1,13 @@
 <div class="header">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-5">
-                <!-- Logo -->
-                <div class="logo">
-                    <h1><a href="{{route('admin.index')}}">Admin</a></h1>
-                </div>
-            </div>
 
-            <div class="col-md-2 pull-right">
-                <div class="navbar navbar-inverse" role="banner">
+        <div class="row">
+
+
+
+                <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+
+    <a class="navbar-brand"  href="{{route('home')}}">ICB Admin</a>
+
                     <nav class="collapse navbar-collapse bs-navbar-collapse navbar-right" role="navigation">
                         <ul class="nav navbar-nav">
                             <li class="dropdown">
@@ -23,7 +21,6 @@
                         </ul>
                     </nav>
                 </div>
-            </div>
+
         </div>
     </div>
-</div>
