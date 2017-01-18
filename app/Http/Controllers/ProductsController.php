@@ -15,7 +15,9 @@ class ProductsController extends Controller
      */
     public function index()
     {
-        //
+      $products=Product::all();
+return view('admin.product.index',compact('products'));
+
     }
 
     /**
@@ -38,6 +40,18 @@ $categories=Category::pluck('name','id');
     public function store(Request $request)
     {
 $formInput=$request->except('image');
+
+//Validation for image Uploading and  name, size, price which needs to be filled in
+
+$this->validate($request,[
+'name'=>'required',
+'size'=>'required',
+'price'=>'required',
+'image'=>'image|mimes:jpg,jpeg,png,gif|max:10000' //here only certain types can be uploaded and size cannot be bigger than 10000kb
+
+]);
+
+//Image Uploading
 $image=$request->image;
 if($image){
 $imageName=$image->getClientOriginalName();

@@ -3,18 +3,23 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Product;
 
 class FrontEndController extends Controller
 {
 
     public function index()
     {
-return view('front-end.home');
+
+      $jackets=Product::all();
+return view('front-end.home',compact('jackets'));
 }
 
 public function jackets()
 {
-return view('front-end.jackets');
+
+  $jackets=Product::all();
+return view('front-end.jackets',compact('jackets'));
 }
 
 public function jacket()
@@ -23,3 +28,5 @@ public function jacket()
 }
 
 }
+
+//Jackets function:   pass data through to the jackets page so it can be listed
