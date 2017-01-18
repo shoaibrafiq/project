@@ -1,4 +1,4 @@
-{{-- Side Navigation --}}
+
 <br />
 <br />
 <br />
@@ -8,20 +8,15 @@
     -webkit-box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
     box-shadow: 1px 2px 4px rgba(0, 0, 0, .5); display: block;">
         <ul class="nav">
-            <!-- Main menu -->
-            <li class="current"><a href="{{route('admin.index')}}"><i class="glyphicon glyphicon-home"></i>
+
+            <li class="current"><a href="{{route('admin.index')}}">
                     Dashboard</a></li>
-            <li class="submenu">
-                <a href="#">
-                    <i class="glyphicon glyphicon-list"></i> Products
-                    <span class="caret pull-right"></span>
-                </a>
-                <!-- Sub menu -->
-                <ul>
-                  <li><a href="{{route('product.index')}}">Products</a></li>
+
+
+                  <li><a href="{{route('product.index')}}">All Products</a></li>
                     <li><a href="{{route('product.create')}}">Add Product</a></li>
-                </ul>
-            </li>
+                    <li><a href="{{route('category.index')}}">Categories</a></li>
+
         </ul>
     </div>
-</div> <!-- ADMIN SIDE NAV-->
+</div>

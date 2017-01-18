@@ -14,6 +14,7 @@ public function products()
 {
 return $this->hasMany(Product::class);
 
-}
+}//defined the relationship with products
+// One category has many products 
 
 }

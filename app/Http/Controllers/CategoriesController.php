@@ -1,10 +1,10 @@
-
 <?php
-
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 
+
+use Illuminate\Http\Request;
+use App\Category;
 class CategoriesController extends Controller
 {
     /**
@@ -14,7 +14,8 @@ class CategoriesController extends Controller
      */
     public function index()
     {
-        //
+      $categories=Category::all();
+        return view('admin.category.index',compact('categories'));
     }
 
     /**
@@ -35,7 +36,8 @@ class CategoriesController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        Category::create($request->all());
+        return back();
     }
 
     /**
@@ -46,9 +48,11 @@ class CategoriesController extends Controller
      */
     public function show($id)
     {
-        //
-    }
-
+      $products=Category::find($id)->products;
+      $categories=Category::all();
+        return view('admin.category.index',compact(['categories','products']));
+    } //finding the category with $id and then defining the relationships with products, this will find all the products related to the category
+//also put an arry because passing more thatn one item
     /**
      * Show the form for editing the specified resource.
      *
