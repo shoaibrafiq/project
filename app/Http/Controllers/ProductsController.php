@@ -62,7 +62,7 @@ $formInput['image']=$imageName;
 
 
         Product::create($formInput);
-        return redirect()->route('admin.index');
+        return redirect()->route('products.index');
     }
 
     /**
@@ -107,6 +107,7 @@ $formInput['image']=$imageName;
      */
     public function destroy($id)
     {
-        //
-    }
+      Product::destroy($id);
+             return back();
+    } // this function deletes the products
 }

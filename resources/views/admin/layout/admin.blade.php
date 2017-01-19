@@ -23,7 +23,7 @@
                     <div class="content-box-large">
                         @yield('content')
                     </div>
-                </div>
+                </div>  
             </div>
         </div><!--/Display area after sidenav-->
     </div>
@@ -33,25 +33,7 @@
 <script src="{{asset('dist/js/jquery.js')}}"></script>
 
 <!-- Bootstrap Core JavaScript -->
-<script src="{{asset('dist/js/bootstrap.min.js')}}"></script><script>
-    $(document).ready(function () {
-        $(".submenu > a").click(function (e) {
-            e.preventDefault();
-            var $li = $(this).parent("li");
-            var $ul = $(this).next("ul");
-
-            if ($li.hasClass("open")) {
-                $ul.slideUp(350);
-                $li.removeClass("open");
-            } else {
-                $(".nav > li > ul").slideUp(350);
-                $(".nav > li").removeClass("open");
-                $ul.slideDown(350);
-                $li.addClass("open");
-            }
-        });
-    });
-</script>
+<script src="{{asset('dist/js/bootstrap.min.js')}}"></script>
 
 </body>
 </html>

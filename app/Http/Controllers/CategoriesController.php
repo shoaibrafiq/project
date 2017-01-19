@@ -52,7 +52,7 @@ class CategoriesController extends Controller
       $categories=Category::all();
         return view('admin.category.index',compact(['categories','products']));
     } //finding the category with $id and then defining the relationships with products, this will find all the products related to the category
-//also put an arry because passing more thatn one item
+//also put an arry because passing more than one item
     /**
      * Show the form for editing the specified resource.
      *
