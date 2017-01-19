@@ -18,7 +18,12 @@
            {{method_field('DELETE')}}
           <input class="btn btn-sm btn-danger" type="submit" value="Delete">
         </form>
- </form>
+
+ <form action="{{route('product.edit',$product->id)}}"  method="POST">
+         {{csrf_field()}}
+          {{ method_field('PATCH') }}
+         <input class="btn btn-sm" type="submit" value="Edit">
+       </form>
 
   </li>
 

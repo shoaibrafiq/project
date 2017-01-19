@@ -82,11 +82,12 @@ $formInput['image']=$imageName;
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
-    {
-        //
-    }
+    public function edit()
+{
 
+return view('admin.product.edit', compact('product'));
+
+}
     /**
      * Update the specified resource in storage.
      *
@@ -96,7 +97,9 @@ $formInput['image']=$imageName;
      */
     public function update(Request $request, $id)
     {
-        //
+      $product->update($request->all());
+
+return back();
     }
 
     /**
