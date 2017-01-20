@@ -20,6 +20,8 @@
         </form>
  </form>
 
+ <a class="btn btn-sm btn-success" href="{{route('product.edit', $product->id)}}">Edit</a>
+
   </li>
 
 @empty

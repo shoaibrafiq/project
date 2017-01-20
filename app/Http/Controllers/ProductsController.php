@@ -84,7 +84,8 @@ $formInput['image']=$imageName;
      */
     public function edit($id)
     {
-        //
+      $product = Product::findOrFail($id);
+        return view('product.edit');
     }
 
     /**
@@ -96,7 +97,14 @@ $formInput['image']=$imageName;
      */
     public function update(Request $request, $id)
     {
-        //
+      $product = Product::findOrFail($id);
+
+
+
+  $input = $request->all();
+
+  $product->fill($input)->save();
+
     }
 
     /**
