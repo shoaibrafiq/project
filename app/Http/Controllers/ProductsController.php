@@ -85,7 +85,9 @@ $formInput['image']=$imageName;
     public function edit($id)
     {
       $product = Product::findOrFail($id);
-        return view('product.edit');
+      $categories=Category::pluck('name','id');
+      return view('admin.product.edit', compact('categories','product'));
+
     }
 
     /**
@@ -105,6 +107,7 @@ $formInput['image']=$imageName;
 
   $product->fill($input)->save();
 
+return back();
     }
 
     /**
