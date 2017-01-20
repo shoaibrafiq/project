@@ -47,7 +47,7 @@
   {{ Form::file('image',array('class' => 'form-control')) }}
 </div>
 
-{{ Form::submit('Create', array('class' => 'btn btn-default'))}}
+{{ Form::submit('Update', array('class' => 'btn btn-default'))}}
 {!! Form::close() !!}
 
   </div>

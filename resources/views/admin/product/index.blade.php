@@ -7,12 +7,14 @@
   <div style="margin-left:250px;  moz-box-shadow: 1px 2px 4px rgba(0, 0, 0,0.5);
   -webkit-box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
   box-shadow: 1px 2px 4px rgba(0, 0, 0, .5); display: block;"class="col-md-12 col-md-offset-2 row">
-<h3>Products</h3>
-
+<h3>Products List</h3>
+<br />
 
   @forelse ($products as $product)
 
-  <h4>Product ID: {{$product->id}} Product Name: {{$product->name}}</h4>
+  <h4>Product ID: {{$product->id}}</h4>
+  <h4>Product Name: {{$product->name}}</h4>
+
   <form action="{{route('product.destroy',$product->id)}}"  method="POST">
           {{csrf_field()}}
            {{method_field('DELETE')}}
