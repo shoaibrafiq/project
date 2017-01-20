@@ -27,8 +27,9 @@ return view('admin.product.index',compact('products'));
      */
     public function create()
     {
-$categories=Category::pluck('name','id');
+$categories=Category::all();
         return view('admin.product.create',compact('categories'));
+
     }
 
     /**
@@ -51,6 +52,11 @@ $this->validate($request,[
 
 ]);
 
+$product = new Product;
+$name = $request->name;
+$price = $request->price;
+$description = $request->description;
+$size = $request->size;
 //Image Uploading
 $image=$request->image;
 if($image){
@@ -58,10 +64,13 @@ $imageName=$image->getClientOriginalName();
 $image->move('images',$imageName);
 $formInput['image']=$imageName;
 
+
+
 }
 
 
         Product::create($formInput);
+        $product->save();
         return redirect()->route('products.index');
     }
 
@@ -82,10 +91,10 @@ $formInput['image']=$imageName;
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit()
+    public function edit($id)
 {
 
-return view('admin.product.edit', compact('product'));
+return view('admin.product.edit', compact('categories'));
 
 }
     /**

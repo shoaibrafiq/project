@@ -19,7 +19,7 @@
           <input class="btn btn-sm btn-danger" type="submit" value="Delete">
         </form>
 
- <form action="{{route('product.edit',$product->id)}}"  method="POST">
+ <form action="{{route('product.edit',$product->id)}}"  method="GET">
          {{csrf_field()}}
           {{ method_field('PATCH') }}
          <input class="btn btn-sm" type="submit" value="Edit">

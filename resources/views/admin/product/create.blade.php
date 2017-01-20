@@ -8,45 +8,61 @@
   -webkit-box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
   box-shadow: 1px 2px 4px rgba(0, 0, 0, .5); display: block;"class="col-md-12 col-md-offset-2 row">
 <h3>Add Product</h3>
-{!! Form::open(['route' => 'product.store', 'method' => 'post', 'files' => true]) !!}
+
+<form method="POST" action="{{ route('product.store') }}">
+
+  {{ csrf_field() }}
 
 <div class="form-group">
+  <span>Name</span>
+  <input name="name" class="form-control"></input>
 
-  {{ Form::label('name', 'Name') }}
-{{ Form::text('name', null, array('class' => 'form-control')) }}
 </div>
 <div class="form-group">
+  <span>Price</span>
+  <input name="price" class="form-control"></input>
 
-  {{ Form::label('price', 'Price') }}
-  {{ Form::text('price', null, array('class' => 'form-control')) }}
-</div>
-
-<div class="form-group">
-
-  {{ Form::label('description', 'Description') }}
-  {{ Form::text('description', null, array('class' => 'form-control')) }}
 </div>
 
 <div class="form-group">
+  <span>Description</span>
+  <textarea name="Description" class="form-control"></textarea>
 
-  {{ Form::label('size', 'Size') }}
-  {{ Form::select('size', ['small' => 'Small', 'medium' =>'Medium', 'large' => 'Large'], null, array('class' => 'form-control')) }}
 </div>
 
 <div class="form-group">
+  <span>Size</span>
+  <select>
+ <option value="small">Small</option>
+ <option value="medium">Medium</option>
+ <option value="large">Large</option>
+</select>
 
-  {{ Form::label('category_id', 'Categories') }}
-  {{ Form::select('category_id', $categories, null, array('class' => 'form-control', 'placeholder' => 'Select')) }}
 </div>
 <div class="form-group">
+  <span>Category</span>
+  <select>
 
-  {{ Form::label('image', 'Image') }}
-  {{ Form::file('image',array('class' => 'form-control')) }}
+@foreach ($categories as $category)
+
+  <option value="{{ $category->id }}">{{ $category->name }}</option>
+@endforeach
+
+</select>
+
 </div>
 
-{{ Form::submit('Create', array('class' => 'btn btn-default'))}}
-{!! Form::close() !!}
+<div class="form-group">
+  <span>Image</span>
+  <input type="file" name="image" accept="image/*">
 
-  </div>
+</div>
+
+<div class="form-group">
+  <button type="submit" class="btn btn-primary">Add Product</button>
+
+</div>
+
+</form>
 
 @endsection
