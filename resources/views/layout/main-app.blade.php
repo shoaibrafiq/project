@@ -40,7 +40,7 @@
                         <a href="{{route('jackets')}}">Jackets</a>
                     </li>
                     <li>
-                        <a href="#">Contact</a>
+                        <a href="{{route('about')}}">About Us</a>
                     </li>
                     <li>
                         <a href="#">Basket</a>

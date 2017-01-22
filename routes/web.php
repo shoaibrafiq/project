@@ -15,7 +15,7 @@
 Route::get('/', 'FrontEndController@index')->name('home');
 Route::get('/jackets', 'FrontEndController@jackets')->name('jackets');
 Route::get('/jacket', 'FrontEndController@jacket')->name('jacket');
-
+Route::get('/about', 'FrontEndController@about')->name('about');
 Auth::routes();
 
 Route::get('/logout', 'Auth\LoginController@logout');

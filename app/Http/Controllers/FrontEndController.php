@@ -26,6 +26,10 @@ public function jacket()
 {
   return view('front-end.jacket');
 }
+public function about()
+{
+  return view('front-end.about');
+}
 
 }
 
