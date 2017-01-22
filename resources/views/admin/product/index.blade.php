@@ -14,13 +14,17 @@
 
   <h4>Product ID: {{$product->id}}</h4>
   <h4>Product Name: {{$product->name}}</h4>
+ <a class="btn btn-sm btn-success" href="{{route('product.show', $product->id)}}">View</a>
+ <a class="btn btn-sm btn-default" href="{{route('product.edit', $product->id)}}">Edit</a>
+<br />
+<br />
 
   <form action="{{route('product.destroy',$product->id)}}"  method="POST">
           {{csrf_field()}}
            {{method_field('DELETE')}}
           <input class="btn btn-sm btn-danger" type="submit" value="Delete">
         </form>
- <a class="btn btn-sm btn-success" href="{{route('product.edit', $product->id)}}">Edit</a>
+
 
 
 @empty

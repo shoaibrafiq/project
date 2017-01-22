@@ -8,12 +8,6 @@
 </head>
 <body>
 @include('admin.layout.includes.header')
-<div class="page-content">
-    @if(Session::has('message'))
-        <div class="alert alert-info">
-            <p>{{ Session::get('message') }}</p>
-        </div>
-    @endif
 
     <div class="row">
         @include('admin.layout.includes.sidenav')
@@ -23,10 +17,9 @@
                     <div class="content-box-large">
                         @yield('content')
                     </div>
-                </div>  
+                </div>
             </div>
         </div><!--/Display area after sidenav-->
-    </div>
 
 </div><!--/Page Content-->
 
