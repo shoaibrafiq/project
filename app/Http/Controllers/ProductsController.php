@@ -18,7 +18,7 @@ class ProductsController extends Controller
       $products=Product::all();
 return view('admin.product.index',compact('products'));
 
-    }
+    }// fetching all the products from the database
 
     /**
      * Show the form for creating a new resource.
@@ -29,7 +29,7 @@ return view('admin.product.index',compact('products'));
     {
 $categories=Category::pluck('name','id');
         return view('admin.product.create',compact('categories'));
-    }
+    }// The pluck method retrieves all of the values for a given key i have also specified resulting collection to be keyed
 
     /**
      * Store a newly created resource in storage.
@@ -89,7 +89,7 @@ $formInput['image']=$imageName;
       $categories=Category::pluck('name','id');
       return view('admin.product.edit', compact('categories','product'));
 
-    }
+    }// this function selects the product and category and returns you back to the page
 
     /**
      * Update the specified resource in storage.
@@ -109,7 +109,7 @@ $formInput['image']=$imageName;
   $product->fill($input)->save();
 
 return back();
-    }
+    } // this function updates the products when edited and saves the changes then returns you back to the page
 
     /**
      * Remove the specified resource from storage.
@@ -121,5 +121,5 @@ return back();
     {
       Product::destroy($id);
              return back();
-    } // this function deletes the products
+    } // this function deletes the products and returns you back to the page
 }

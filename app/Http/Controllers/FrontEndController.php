@@ -13,14 +13,14 @@ class FrontEndController extends Controller
 
       $jackets=Product::all();
 return view('front-end.home',compact('jackets'));
-}
+}// jackets variable fetches all the products from the products table and is displayed in the index page
 
 public function jackets()
 {
 
   $jackets=Product::all();
 return view('front-end.jackets',compact('jackets'));
-}
+}// jackets variable fetches all the products from the products table and is displayed in the jackets page
 
 public function jacket()
 {
@@ -32,5 +32,4 @@ public function about()
 }
 
 }
-
 //Jackets function:   pass data through to the jackets page so it can be listed
