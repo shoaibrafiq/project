@@ -18,7 +18,7 @@ class CreatePasswordResetsTable extends Migration
             $table->string('token')->index();
             $table->timestamp('created_at')->nullable();
         });
-    }
+    }//table for password reset when the user clicks forgotten passoword a link is sent to the email then it is stored as new password
 
     /**
      * Reverse the migrations.

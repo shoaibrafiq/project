@@ -18,7 +18,7 @@ class CreateCategoriesTable extends Migration
             $table->string('name');
             $table->timestamps();
         });
-    }
+    }// the name and id for each category is stored here
 
     /**
      * Reverse the migrations.

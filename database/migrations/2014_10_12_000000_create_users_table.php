@@ -20,7 +20,7 @@ class CreateUsersTable extends Migration
             $table->string('password');
             $table->rememberToken();
             $table->timestamps();
-        });
+        }); //This is the database table for users here the data is stored when they register 
     }
 
     /**

@@ -23,7 +23,7 @@ class CreateProductsTable extends Migration
             $table->integer('category_id');
             $table->timestamps();
         });
-    }
+    }//all the data for the products is stored in this database and is also linked to categories table
 
     /**
      * Reverse the migrations.
