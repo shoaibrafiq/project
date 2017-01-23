@@ -4,7 +4,7 @@
 @section('content')
 
 <div class="container">
-
+<!--this is the about us page displaying info about how the website works  -->
 <br/>
 <br />
 <br/>

@@ -6,6 +6,7 @@
 <br />
 <br />
 <br />
+<!--this is the show page where the admin can view data for one product and also delete and edit from the page -->
 
                   <div class="thumbnail" >
                       <img style=" height:400px;" src="{{url('images',$product->image)}}" class="img-responsive">

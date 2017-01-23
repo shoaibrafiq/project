@@ -1,6 +1,9 @@
 @extends('admin.layout.admin')
 @section('content')
 
+  <!--this is the index or dashboard for when the user logs in information about the admin features are shown -->
+
+
   <div style="margin-left:50px;"class="container">
       <div class="row">
           <div class="col-md-8 col-md-offset-2">

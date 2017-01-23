@@ -2,7 +2,7 @@
 
         <div class="row">
 
-
+<!--this page is the header for the admin index page when logged in -->
 
                 <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
 

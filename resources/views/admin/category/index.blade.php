@@ -10,7 +10,7 @@
           <!-- Collect the nav links, forms, and other content for toggling -->
 <br />
 <br />
-
+  <!--  forelse allows you to provide alternate content if you don't have any results for the page to display. this is displaying categories-->
                 @if(!empty($categories))
                   @forelse($categories as $category)
 
@@ -25,7 +25,7 @@
 
 <div>
 
-
+<!-- when you click on the button a modal and form is shown where you can add a category -->
           <a class="btn btn-primary pull-right navbar-right" data-toggle="modal" href="#category">Add Category</a>
           </div>
               <div class="modal fade" id="category">
@@ -49,12 +49,13 @@
                               <button type="submit" class="btn btn-primary">Save changes</button>
                           </div>
                           {!! Form::close() !!}
-                      </div><!-- /.modal-content -->
-                  </div><!-- /.modal-dialog -->
-              </div><!-- /.modal -->
+                      </div><!--modal-content -->
+                  </div><!--modal-dialog -->
+              </div><!-- modal -->
 <br>
 <hr />
       <!-- /.container -->
+      <!-- displays table, when the admin clicks a category it shows which products are linked to it in a table -->
       @if(isset($products))
 
          <h3>Products</h3>

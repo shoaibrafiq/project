@@ -2,13 +2,14 @@
 
 @section('content')
 
+<!--this is the create page where the user can add products -->
 
-
+<!--used old laravel 4 form method as new version was not working -->
   <div style="margin-left:250px;  moz-box-shadow: 1px 2px 4px rgba(0, 0, 0,0.5);
   -webkit-box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
   box-shadow: 1px 2px 4px rgba(0, 0, 0, .5); display: block;"class="col-md-12 col-md-offset-2 row">
 <h3>Add Product</h3>
-{!! Form::open(['route' => 'product.store', 'method' => 'post', 'files' => true]) !!}
+{!! Form::open(['route' => 'product.store', 'method' => 'post', 'files' => true]) !!} <!--fetching info from productscontroller  -->
 
 <div class="form-group">
 

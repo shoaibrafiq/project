@@ -1,6 +1,6 @@
 @extends('layout.main-app')
 @section('content')
-
+<!--main home page -->
       <!-- Full Page Image Background Carousel Header -->
       <header id="myCarousel" class="carousel slide">
           <!-- Indicators -->
@@ -51,6 +51,8 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
+              <!--  forelse allows you to provide alternate content if you don't have any results for the page to display. this is displaying categories-->
+              
               @forelse($jackets->chunk(4) as $chunk) <!-- using chunk method to output only 4 products from the database -->
                 @foreach($chunk as $jacket)
                 <div class="col-xs-12 col-sm-6 col-md-3">

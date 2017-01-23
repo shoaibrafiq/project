@@ -1,7 +1,7 @@
 @extends('layout.main-app')
 
 @section('title','Jackets')
-
+<!--This is the jackets page where the user can see all the jackets added by the admin  -->
 
 @section('content')
 <br />
@@ -11,6 +11,8 @@
   <div class="container">
       <div class="row">
           <div class="col-md-12">
+            <!--  forelse allows you to provide alternate content if you don't have any results for the page to display. this is displaying categories-->
+            
             @forelse($jackets as $jacket)
               <div class="col-xs-12 col-sm-6 col-md-3">
                   <div class="thumbnail" >

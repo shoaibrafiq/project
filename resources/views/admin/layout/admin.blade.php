@@ -8,7 +8,7 @@
 </head>
 <body>
 @include('admin.layout.includes.header')
-
+<!--this page is the admin index page when logged in, the sidenav and header are included here -->
     <div class="row">
         @include('admin.layout.includes.sidenav')
         <div class="col-md-10 display-area">

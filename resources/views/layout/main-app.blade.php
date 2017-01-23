@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>@yield('title','ICB Jackets')</title>
-
+<!--main layout for the front-end -->
     <!-- Bootstrap Core CSS -->
     <link href="{{asset('dist/css/bootstrap.min.css')}}" rel="stylesheet">
 
@@ -57,7 +57,7 @@
     </nav>
 
 @yield('content')
-        <!-- Footer -->
+
 
 
     </div>

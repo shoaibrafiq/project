@@ -2,6 +2,7 @@
 
 @section('content')
 
+  <!--this page shows all the products listed with IDs admin can click delete, edit and view -->
 
 
   <div style="margin-left:250px;  moz-box-shadow: 1px 2px 4px rgba(0, 0, 0,0.5);
