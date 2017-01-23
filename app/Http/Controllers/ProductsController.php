@@ -18,7 +18,7 @@ class ProductsController extends Controller
       $products=Product::all();
 return view('admin.product.index',compact('products'));
 
-    }// fetching all the products from the database
+    }// fetching all the products from the database to display on index page
 
     /**
      * Show the form for creating a new resource.

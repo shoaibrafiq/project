@@ -8,6 +8,7 @@ class Product extends Model
 {
 
 protected $fillable=['name','description','price','size','category_id','image'];
+// as laravel is protected from anyone to edit a field it needs to be passed through
 
 public function category()
 {
