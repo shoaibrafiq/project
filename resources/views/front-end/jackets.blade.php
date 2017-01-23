@@ -26,7 +26,7 @@
                               <div class="col-md-8 col-sm-8 col-xs-8">
                                 <br />
                                 <br />
-                                  <a href="{{route('jacket')}}" class="btn btn-success btn-product">View Jacket</a>
+                                  <a href="#" class="btn btn-success btn-product">View Jacket</a>
                               </div>
                           </div>
 
