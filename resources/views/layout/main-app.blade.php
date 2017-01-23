@@ -45,6 +45,9 @@
                     <li>
                         <a href="#">Basket</a>
                     </li>
+                    <li>
+                        <a href="{{route('admin.index')}}">Admin</a>
+                    </li>
                 </ul>
 
             </div>
