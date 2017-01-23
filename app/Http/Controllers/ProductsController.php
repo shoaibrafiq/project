@@ -62,7 +62,7 @@ $formInput['image']=$imageName;
 
 
         Product::create($formInput);
-        return redirect()->route('products.index');
+        return redirect()->route('product.index');
     }
 
     /**
